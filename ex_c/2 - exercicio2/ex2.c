@@ -1,33 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, num3;
+    int num1 = 0, num2 = 0, num3 = 0;
+    int maior = 0, menor = 0;
 
-    printf("Digite o primeiro numero: ");
+    printf("Insira o primeiro numero: ");
     scanf("%d", &num1);
-
-    printf("Digite o segundo numero: ");
+    printf("Insira o segundo numero: ");
     scanf("%d", &num2);
-
-    printf("Digite o terceiro numero: ");
+    printf("Insira o terceiro numero: ");
     scanf("%d", &num3);
 
-    int maior = num1;
-    if (num2 > maior) {
-        maior = num2;
-    }
-    if (num3 > maior) {
-        maior = num3;
-    }
-
-    int menor = num1;
-    if (num2 < menor) {
-        menor = num2;
-    }
-    if (num3 < menor) {
-        menor = num3;
-    }
-
+    maior = num1;
+    menor = num1;
+    
+    if (num2 > maior) maior = num2;
+    if (num3 > maior) maior = num3;
+    if (num2 < menor) menor = num2;
+    if (num3 > menor) menor = num3;
+    
     printf("O maior número é: %d\n", maior);
     printf("O menor número é: %d\n", menor);
 

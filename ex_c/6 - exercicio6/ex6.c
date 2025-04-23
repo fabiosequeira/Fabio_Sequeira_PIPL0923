@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    char nome[100];
-    float valorCompra, desconto, valorTotal;
+    char nome[100] = {0};
+    float valorCompra = 0.0f;
+    float desconto = 0.0f;
+    float valorTotal = 0.0f;
+    float valorDesconto = 0.0f;
 
     printf("Insira o nome do cliente: ");
     scanf("%s", nome);
@@ -17,7 +20,7 @@ int main() {
         desconto = 0.20;
     }
 
-    float valorDesconto = valorCompra * desconto;
+    valorDesconto = valorCompra * desconto;
     valorTotal = valorCompra - valorDesconto;
 
     printf("Nome do cliente: %s\n", nome);
